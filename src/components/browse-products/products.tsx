@@ -38,7 +38,7 @@ function ChildProductItem({ childProduct }: { childProduct: ChildProduct }) {
     } else {
       removeChildProduct(childProduct.id);
     }
-  }, [isSelected, count, childProduct]);
+  }, [isSelected, count, childProduct, removeChildProduct, selectChildProduct]);
 
   return (
     <div

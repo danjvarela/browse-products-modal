@@ -32,7 +32,7 @@ export const ProductCountInput = React.forwardRef<
     (val: number) => {
       updateSelectedCount(childProduct.id, val);
     },
-    [childProduct.id],
+    [childProduct.id, updateSelectedCount],
   );
 
   const debouncedUpdateCount = useMemo(() => {
@@ -56,7 +56,7 @@ export const ProductCountInput = React.forwardRef<
       debouncedUpdateCount(parsed);
       onChange(parsed);
     },
-    [childProduct.id, debouncedUpdateCount],
+    [debouncedUpdateCount, onChange],
   );
 
   useEffect(() => {

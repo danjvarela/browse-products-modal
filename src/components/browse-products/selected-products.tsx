@@ -62,7 +62,14 @@ function SelectedProductItem({
         setView("products");
       }
     },
-    [selected, removeChildProduct, setView, selectedChildProducts, addToast],
+    [
+      selected,
+      removeChildProduct,
+      setView,
+      selectedChildProducts,
+      addToast,
+      selectChildProduct,
+    ],
   );
 
   return (
